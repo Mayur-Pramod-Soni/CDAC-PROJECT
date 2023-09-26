@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+ th:fragment="Layout(content)">
+<head>
+<meta charset="ISO-8859-1">
+<title>Sarthi</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+ rel="stylesheet"
+  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+   crossorigin="anonymous">
+   
+    <style>
+    .nav-link:hover {
+      color:blue;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body class="bg-light">
+	<nav class="navbar navbar-expand-lg navbar-light bg-success">
+    <div style="background-color: black;" class="container-fluid">
+      <a style="font-size: 40px; color: aliceblue;" class="navbar-brand" href="#">Sarthi</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul style="font-size: 20px; font-weight: bold;" class="navbar-nav">
+          <li style="margin-left: 150%;" class="nav-item">
+            <a style="color: aliceblue;" class="nav-link" aria-current="page" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a style="color: aliceblue;" class="nav-link" href="/Reg">Register</a>
+          </li>
+          <li class="nav-item">
+            <a style="color: aliceblue;" class="nav-link" href="signin">Login</a>
+          </li>
+          <li class="nav-item">
+            <a style="color: aliceblue;" class="nav-link" href="/aboutUs">AboutUs</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+<div th:replace="${content}"></div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" 
+crossorigin="anonymous"></script>
+</body>
+</html>
